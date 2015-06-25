@@ -5,7 +5,9 @@ console.log('about to run ify');
 ify();
 console.log('looks like we ran ify');
 
-},{"fs":4,"ifycore":2}],2:[function(require,module,exports){
+},{"fs":2,"ifycore":3}],2:[function(require,module,exports){
+
+},{}],3:[function(require,module,exports){
 
 var $ = require('jquery');
 
@@ -17,7 +19,7 @@ module.exports = function(){
 
 
 
-},{"jquery":3}],3:[function(require,module,exports){
+},{"jquery":4}],4:[function(require,module,exports){
 /*!
  * jQuery JavaScript Library v2.1.4
  * http://jquery.com/
@@ -9228,7 +9230,5 @@ if ( typeof noGlobal === strundefined ) {
 return jQuery;
 
 }));
-
-},{}],4:[function(require,module,exports){
 
 },{}]},{},[1]);

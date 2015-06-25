@@ -1,5 +1,6 @@
 {
   "name": "ify",
+  "private": true,
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
@@ -7,7 +8,7 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "build": "browserify browser.js -o static/ifybundle.js",
-    "watch": "watchify browser.js -o static/bundle.js --debug --verbose"
+    "watch": "watchify browser.js -o static/ifybundle.js --debug --verbose"
   },
   "repository": {
     "type": "git",
@@ -16,7 +17,17 @@
   "author": "seanp33",
   "license": "ISC",
   "devDependencies": {
-
+    "grunt": "0.4.1",
+    "grunt-contrib-clean": "0.5.0",
+    "grunt-contrib-connect": "0.5.0",
+    "grunt-contrib-copy": "0.4.1",
+    "grunt-contrib-cssmin": "^0.11.0",
+    "grunt-contrib-jasmine": "0.5.2",
+    "grunt-contrib-jshint": "0.6.3",
+    "grunt-contrib-uglify": "0.2.7",
+    "grunt-browserify": "^3.8.0",
+    "mocha": "~1.17.1",
+    "should": "~3.1.2"
   },
   "dependencies": {
     "jquery": "^2.1.4",
