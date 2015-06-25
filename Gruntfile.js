@@ -4,7 +4,7 @@ module.exports = function (grunt) {
     uglify: {
       all: {
         files: {
-          'static/ifybundle-min.js': [
+          'static/ifybundle.js': [
             'static/ifybundle.js'
           ]
         }
@@ -13,7 +13,7 @@ module.exports = function (grunt) {
     cssmin: {
       all: {
         files: {
-          'static/fybundle-min.css': [
+          'static/fybundle.css': [
             'css/**/*.css'
           ]
         }
@@ -35,6 +35,11 @@ module.exports = function (grunt) {
         options:{
           browserifyOptions:{
             debug:true
+          },
+          watch:true,
+          keepAlive:true,
+          watchifyOptions:{
+            verbose:true
           }
         }
       }
@@ -50,6 +55,7 @@ module.exports = function (grunt) {
     }
   });
 
+
   grunt.loadNpmTasks('grunt-contrib-connect');
   grunt.loadNpmTasks('grunt-contrib-uglify');
   grunt.loadNpmTasks('grunt-contrib-cssmin');
@@ -59,8 +65,18 @@ module.exports = function (grunt) {
   grunt.loadNpmTasks('grunt-contrib-jasmine');
   grunt.loadNpmTasks('grunt-browserify');
 
-  grunt.registerTask('default', ['clean:dist', 'browserify:dist','uglify:all', 'cssmin:all']);
-  grunt.registerTask('debug', ['clean:dist', 'browserify:debug']);
+  grunt.registerTask('default', [
+    'clean:dist',
+    'browserify:dist',
+    'uglify:all',
+    'cssmin:all'
+  ]);
+
+  grunt.registerTask('debug', [
+    'clean:dist',
+    'cssmin:all',
+    'browserify:debug'
+  ]);
 
 };
 
