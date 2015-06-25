@@ -1,0 +1,12 @@
+node_modules/*
+!node_modules/ifycore
+*.*~
+*~
+*#*#
+*.iml
+*.ipr
+*.iws
+*.ids
+*.log
+.idea
+*.DS_Store
