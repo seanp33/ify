@@ -4,8 +4,8 @@ module.exports = function (grunt) {
     uglify: {
       all: {
         files: {
-          'static/ifybundle.js': [
-            'static/ifybundle.js'
+          'static/bundle.js': [
+            'static/bundle.js'
           ]
         }
       }
@@ -13,7 +13,7 @@ module.exports = function (grunt) {
     cssmin: {
       all: {
         files: {
-          'static/fybundle.css': [
+          'static/bundle.css': [
             'css/**/*.css'
           ]
         }
@@ -25,12 +25,12 @@ module.exports = function (grunt) {
     browserify: {
       dist: {
         files: {
-          'static/ifybundle.js': ['browser.js'],
+          'static/bundle.js': ['browser.js'],
         }
       },
       debug: {
         files: {
-          'static/ifybundle.js': ['browser.js'],
+          'static/bundle.js': ['browser.js'],
         },
         options:{
           browserifyOptions:{
@@ -79,4 +79,3 @@ module.exports = function (grunt) {
   ]);
 
 };
-

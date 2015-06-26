@@ -30,8 +30,8 @@
     "should": "~3.1.2"
   },
   "dependencies": {
+    "ifycore": "^1.0.0",
     "jquery": "^2.1.4",
-    "lodash": "^3.9.3",
-    "ifycore": "^1.0.0"
+    "lodash": "^3.9.3"
   }
 }
